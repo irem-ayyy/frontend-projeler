@@ -1,0 +1,1487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /*background-color: #a5c8d8; font-family:  "Georgia", "Cambria", "Palatino", "Times New Roman", "Times", serif;  */
+}
+
+body {
+  font-family: "StabilGrotesk", system-ui, "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+/* header start */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: -1.2em;
+}
+
+.ortak {
+  left: 0;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+}
+
+.ortak .siteNav__logo {
+  margin-left: 1em;
+}
+
+.header .menu ul {
+  display: flex;
+  margin-left: 1em;
+  font-family: "StabilGrotesk", system-ui, "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+.header .menu ul li {
+  list-style: none;
+  padding: 15px;
+}
+
+.header .menu ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.1em;
+  padding: 8px;
+  border-radius: 5px;
+  line-height: -1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .menu ul li a .bx {
+  font-size: 0.6em;
+}
+
+.header .menu ul li a:hover {
+  background-color: #daebf2;
+  border-radius: 5px;
+}
+
+.btn {
+  margin-right: 1em;
+  font-family: "StabilGrotesk", system-ui, "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+.btn .first,
+.end {
+  padding: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.btn .first {
+  background: none;
+  border: none;
+  margin-right: 1.3em;
+  position: relative;
+}
+
+.btn .first::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  top: 24px;
+  height: 2px;
+  background-color: #6b5b5b;
+  transition: width 0.3s ease-in-out;
+}
+
+.btn .first:hover::after {
+  width: 73%;
+  margin-left: 0.5em;
+}
+
+.btn .end {
+  border-radius: 6px;
+  width: 130px;
+  background-color: #10242f;
+  color: white;
+  position: relative;
+  transition: background-color 0.2s ease-in;
+  border: none;
+  overflow: hidden;
+}
+
+.btn .end::before,
+.btn .end::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+/* İlk geçiş: yeşilimsi */
+.btn .end::before {
+  background-color: #748e99;
+  opacity: 0;
+}
+
+/* İkinci geçiş: mavi soldan sağa */
+.btn .end::after {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  transform: translateX(-100%);
+}
+
+/* Hover durumu */
+.btn .end:hover::before {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.btn .end:hover::after {
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+}
+
+/* Yazı her zaman üstte kalsın */
+.btn .end span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn .end:hover span {
+  color: black;
+  /* Hover olduğunda siyah olacak */
+}
+
+/* header end*/
+
+/* ana kısım start */
+.ana-kisim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ana-kisim .yazi h2 {
+  font-size: 3.8em;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+.ana-kisim .yazi p {
+  font-size: 1.4em;
+  margin-top: 0.5em;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.ana-btn {
+  margin-top: 3em;
+  text-align: center;
+  width: 55%;
+  height: 60px;
+  border-radius: 8px;
+  background-color: #10242f;
+  color: white;
+  position: relative;
+  transition: background-color 0.2s ease-in;
+  border: none;
+  overflow: hidden;
+}
+
+.ana-btn span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.ana-btn::before,
+.ana-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+/* İlk geçiş: yeşilimsi */
+.ana-btn::before {
+  background-color: #748e99;
+  opacity: 0;
+}
+
+/* İkinci geçiş: mavi soldan sağa */
+.ana-btn::after {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  transform: translateX(-100%);
+}
+
+/* Hover durumu */
+.ana-btn:hover::before {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.ana-btn:hover::after {
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+}
+
+/* Yazı her zaman üstte kalsın */
+.ana-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.ana-btn:hover span {
+  color: black;
+  /* Hover olduğunda siyah olacak */
+}
+
+/* ana kısım end */
+
+/* orta-kısım start */
+
+.orta-kisim {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5em;
+}
+
+/* orta-ilk start */
+.orta-kisim .orta-ilk h1 {
+  padding: 7px;
+  font-size: 2.3em;
+  font-weight: bold;
+}
+
+.orta-kisim .orta-ilk p {
+  padding: 7px;
+  font-size: 1.5em;
+}
+
+/* orta-ilk end */
+
+/* orta-two start */
+.orta-kisim .orta-two {
+  margin-top: 7em;
+  display: flex;
+  margin-left: 2.9em;
+  margin-bottom: 3em;
+}
+
+.orta-kisim .orta-two .card-item1,
+.card-item2,
+.card-item3,
+.card-item4 {
+  background-color: #daebf2;
+  height: 370px;
+  width: 340px;
+  border-radius: 18px;
+}
+
+.orta-kisim .orta-two .card-item2,
+.card-item3,
+.card-item4 {
+  margin-left: 1.2em;
+}
+
+/* cart-item1 start */
+.orta-kisim .orta-two .card-item1 {
+  text-align: left;
+}
+
+.orta-kisim .orta-two .card-item1 #bx-one {
+  font-size: 5em;
+  margin-top: 0.3em;
+  margin-left: 0.2em;
+  cursor: pointer;
+}
+
+.orta-kisim .orta-two .card-item1 h3 {
+  font-size: 1.3em;
+  margin-top: 2em;
+  margin-left: 1em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  line-height: 0.5;
+}
+
+.orta-kisim .orta-two .card-item1 h3 .underline {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+}
+
+.orta-kisim .orta-two .card-item1 h3 .underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.orta-kisim .orta-two .card-item1 h3:hover .underline {
+  width: 100%;
+}
+
+.orta-kisim .orta-two .card-item1 h3 .underline2 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+}
+
+.orta-kisim .orta-two .card-item1 h3 .underline2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.orta-kisim .orta-two .card-item1 h3:hover .underline2 {
+  width: 70%;
+}
+
+.orta-kisim .orta-two .card-item1 h3 br {
+  display: block;
+  margin-top: 2px;
+  margin-top: 10px;
+}
+
+.orta-kisim .orta-two .card-item1 h3 #bx-two {
+  font-size: 0.7em;
+  transition: transform 0.5s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.orta-kisim .orta-two .card-item1 h3:hover #bx-two {
+  transform: translateX(5px);
+}
+
+.orta-kisim .orta-two .card-item1 p {
+  margin-top: 2em;
+  margin-left: 1em;
+  font-size: 17px;
+}
+
+/* cart-item1 end */
+
+/* cart-item2 start */
+.orta-kisim .orta-two .card-item2 {
+  text-align: left;
+}
+
+.orta-kisim .orta-two .card-item2 #bx-one {
+  font-size: 5em;
+  margin-top: 0.3em;
+  margin-left: 0.2em;
+  cursor: pointer;
+}
+
+.orta-kisim .orta-two .card-item2 h3 {
+  font-size: 1.3em;
+  margin-top: 2em;
+  margin-left: 1em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  line-height: 0.5;
+}
+
+.orta-kisim .orta-two .card-item2 h3 .underline {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+}
+
+.orta-kisim .orta-two .card-item2 h3 .underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.orta-kisim .orta-two .card-item2 h3:hover .underline {
+  width: 100%;
+}
+
+.orta-kisim .orta-two .card-item2 h3 .underline2 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+}
+
+.orta-kisim .orta-two .card-item2 h3 .underline2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.orta-kisim .orta-two .card-item2 h3:hover .underline2 {
+  width: 90%;
+}
+
+.orta-kisim .orta-two .card-item2 h3 br {
+  display: block;
+  margin-top: 2px;
+  margin-top: 10px;
+}
+
+.orta-kisim .orta-two .card-item2 h3 #bx-two {
+  font-size: 0.7em;
+  transition: transform 0.5s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.orta-kisim .orta-two .card-item2 h3:hover #bx-two {
+  transform: translateX(5px);
+}
+
+.orta-kisim .orta-two .card-item2 p {
+  margin-top: 2em;
+  margin-left: 1em;
+  font-size: 17px;
+}
+
+/* cart-item2 end */
+
+/* cart-item3 start */
+.orta-kisim .orta-two .card-item3 {
+  text-align: left;
+}
+
+.orta-kisim .orta-two .card-item3 #bx-one {
+  font-size: 5em;
+  margin-top: 0.3em;
+  margin-left: 0.2em;
+  cursor: pointer;
+}
+
+.orta-kisim .orta-two .card-item3 h3 {
+  font-size: 1.3em;
+  margin-top: 2em;
+  margin-left: 1em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  line-height: 0.5;
+}
+
+.orta-kisim .orta-two .card-item3 h3 .underline,
+.orta-kisim .orta-two .card-item3 h3 .underline2 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+}
+
+.orta-kisim .orta-two .card-item3 h3 .underline::after,
+.orta-kisim .orta-two .card-item3 h3 .underline2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.orta-kisim .orta-two .card-item3 h3:hover .underline {
+  width: 100%;
+}
+
+.orta-kisim .orta-two .card-item3 h3:hover .underline2 {
+  width: 88%;
+}
+
+.orta-kisim .orta-two .card-item3 h3 .underline3 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+}
+
+.orta-kisim .orta-two .card-item3 h3 .underline3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.orta-kisim .orta-two .card-item3 h3:hover .underline3 {
+  width: 92%;
+}
+
+.orta-kisim .orta-two .card-item3 h3 br {
+  display: block;
+  margin-top: 2px;
+  margin-top: 10px;
+}
+
+.orta-kisim .orta-two .card-item3 h3 #bx-two {
+  font-size: 0.7em;
+  transition: transform 0.5s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.orta-kisim .orta-two .card-item3 h3:hover #bx-two {
+  transform: translateX(5px);
+}
+
+.orta-kisim .orta-two .card-item3 p {
+  margin-top: 2em;
+  margin-left: 1em;
+  font-size: 17px;
+}
+
+/* cart-item3 end */
+
+/* cart-item4 start */
+.orta-kisim .orta-two .card-item4 {
+  text-align: left;
+}
+
+.orta-kisim .orta-two .card-item4 #bx-one {
+  font-size: 5em;
+  margin-top: 0.3em;
+  margin-left: 0.2em;
+  cursor: pointer;
+}
+
+.orta-kisim .orta-two .card-item4 h3 {
+  font-size: 1.3em;
+  margin-top: 2em;
+  margin-left: 1em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  line-height: 0.5;
+}
+
+.orta-kisim .orta-two .card-item4 h3 .underline,
+.orta-kisim .orta-two .card-item4 h3 .underline2 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+}
+
+.orta-kisim .orta-two .card-item4 h3 .underline::after,
+.orta-kisim .orta-two .card-item4 h3 .underline2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.orta-kisim .orta-two .card-item4 h3:hover .underline {
+  width: 100%;
+}
+
+.orta-kisim .orta-two .card-item4 h3:hover .underline2 {
+  width: 95%;
+}
+
+.orta-kisim .orta-two .card-item4 h3 .underline3 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+}
+
+.orta-kisim .orta-two .card-item4 h3 .underline3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.orta-kisim .orta-two .card-item4 h3:hover .underline3 {
+  width: 32%;
+}
+
+.orta-kisim .orta-two .card-item4 h3 br {
+  display: block;
+  margin-top: 2px;
+  margin-top: 10px;
+}
+
+.orta-kisim .orta-two .card-item4 h3 #bx-two {
+  font-size: 0.7em;
+  transition: transform 0.5s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.orta-kisim .orta-two .card-item4 h3:hover #bx-two {
+  transform: translateX(5px);
+}
+
+.orta-kisim .orta-two .card-item4 p {
+  margin-top: 2em;
+  margin-left: 1em;
+  font-size: 17px;
+}
+
+/* cart-item3 end */
+/* orta-two end */
+
+/* big-img start */
+.big-img {
+  margin-top: 10em;
+}
+
+/* text start */
+
+.big-img .text {
+  margin-top: 10em;
+  text-align: center;
+}
+
+.big-img .text h2 {
+  margin-top: 4em;
+  font-size: 2.3em;
+  font-weight: 700;
+}
+
+.big-img .text p {
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+
+/* text end */
+
+/* big-img-i start */
+.big-img .big-img-i {
+  object-fit: cover;
+  margin-top: 3.8em;
+  width: 90%;
+  margin-left: 5em;
+}
+
+/* big-img-i end */
+
+/* icon-text start */
+.icon-text {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 5em;
+  margin-left: 6em;
+  font-family: "Inter", sans-serif;
+}
+
+/* icons start */
+.icon-text .icons {
+  line-height: 4em;
+}
+
+.icon-text .icons h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons p {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-left: 0.3em;
+  margin-left: 0.3em;
+}
+
+/* icons end */
+
+/* icons2 start */
+.icon-text .icons2 {
+  line-height: 4em;
+}
+
+.icon-text .icons2 h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons2 h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons2 p {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-left: 0.3em;
+}
+
+/* icons2 end */
+
+/* icons3 start */
+.icon-text .icons3 {
+  line-height: 4em;
+}
+
+.icon-text .icons3 h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons3 h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons3 p {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-left: 0.3em;
+}
+
+/* icons3 end */
+
+/* icons4 start */
+.icon-text .icons4 {
+  line-height: 4em;
+  margin-top: 2.7em;
+}
+
+.icon-text .icons4 h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons4 h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons4 p {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-left: 0.3em;
+}
+
+/* icons4 end */
+
+/* icons5 start */
+.icon-text .icons5 {
+  margin-top: 2.7em;
+  line-height: 2.7em;
+}
+
+.icon-text .icons5 h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons5 h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons5 p {
+  font-size: 1.5em;
+  margin-left: 0.3em;
+  line-height: 1.5;
+  margin-top: 0.5em;
+}
+
+/* icons5 end */
+
+/* icons6 start */
+.icon-text .icons6 {
+  margin-top: 2.7em;
+  line-height: 4em;
+}
+
+.icon-text .icons6 h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons6 h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons6 p {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-left: 0.3em;
+}
+
+/* icons6 end */
+
+/* icons7 start */
+.icon-text .icons7 {
+  margin-top: 2.7em;
+  line-height: 4em;
+}
+
+.icon-text .icons7 h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons7 h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons7 p {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-left: 0.3em;
+}
+
+/* icons7 end */
+
+/* icons8 start */
+.icon-text .icons8 {
+  margin-top: 2.7em;
+  line-height: 4em;
+}
+
+.icon-text .icons8 h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons8 h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons8 p {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-left: 0.3em;
+}
+
+/* icons8 end */
+
+/* icons9 start */
+.icon-text .icons9 {
+  margin-top: 2.7em;
+  line-height: 4em;
+}
+
+.icon-text .icons9 h3 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.icon-text .icons9 h3 #icn {
+  font-size: 0.9em;
+  margin-left: -2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+.icon-text .icons9 p {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-left: 0.3em;
+}
+
+/* icons9 end */
+/* icon-text end */
+/* big-img end */
+/* orta-kısım end */
+
+
+/* footer start */
+footer {
+  background-color: #daebf2;
+  margin-top: 5em;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+footer .f-logo a {
+  color: black;
+  text-decoration: none;
+}
+
+.f-one {
+  margin-top: 2em;
+  display: block;
+  width: 200px;
+  padding: 0;
+  line-height: 1.4;
+  margin-left: 5em;
+}
+
+.f-one h3 {
+  font-size: 14px;
+  margin-bottom: 1.5em;
+}
+
+.f-one a {
+  text-decoration: none;
+  color: #000000;
+  all: unset;
+  display: block;
+  font-size: 15.5px;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.f-one a .span1,
+.span2,
+.span3,
+.span4 {
+  transition: width .5s ease;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  margin-top: 2px;
+  display: block;
+}
+
+
+.f-one a:hover .span1 {
+  width: 52%;
+}
+
+a:hover .span2 {
+  width: 43%;
+}
+
+a:hover .span3 {
+  width: 54%;
+}
+
+a:hover .span4 {
+  width: 23%;
+}
+
+
+.f-two {
+  display: grid;
+  margin-top: 1.7em;
+  line-height: 1.7;
+}
+
+.f-two h3 {
+  font-size: 14px;
+  margin-bottom: 1.5em;
+
+}
+
+.f-two a {
+  all: unset;
+  display: block;
+  font-size: 15.5px;
+  position: relative;
+  cursor: pointer;
+  color: #000000;
+}
+
+.f-two a .span1 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span1 {
+  width: 82%;
+}
+
+.f-two a .span2 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span2 {
+  width: 97%;
+}
+
+.f-two a .span3 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span3 {
+  width: 50%;
+}
+
+
+.f-two a .span4 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span4 {
+  width: 52%;
+}
+
+.f-two a .span5 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span5 {
+  width: 62.9%;
+}
+
+
+.f-two a .span6 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span6 {
+  width: 82%;
+}
+
+.f-two a .span7 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span7 {
+  width: 54%;
+}
+
+
+.f-two a .span8 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span8 {
+  width: 64%;
+}
+
+.f-two a .span9 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span9 {
+  width: 70%;
+}
+
+.f-two a .span10 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-two a:hover .span10 {
+  width: 70%;
+}
+
+
+.f-three {
+  margin-top: 2em;
+  display: block;
+  width: 200px;
+  padding: 0;
+  line-height: 1.4;
+  margin-left: 5em;
+}
+
+.f-three h3 {
+  font-size: 14px;
+  margin-bottom: 1.5em;
+}
+
+.f-three a {
+  text-decoration: none;
+  color: #000000;
+  all: unset;
+  display: block;
+  font-size: 15.5px;
+  cursor: pointer;
+}
+
+.f-three a .span1 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-three a:hover .span1 {
+  width: 40%;
+}
+
+.f-three a .span2 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-three a:hover .span2 {
+  width: 59.9%;
+}
+
+.f-three a .span3 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-three a:hover .span3 {
+  width: 21%;
+}
+
+.f-three a .span4 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-three a:hover .span4 {
+  width: 17%;
+}
+
+
+.f-four {
+  margin-top: 2em;
+  display: block;
+  width: 200px;
+  padding: 0;
+  line-height: 1.4;
+}
+
+.f-four h3 {
+  font-size: 14px;
+  margin-bottom: 1.5em;
+}
+
+.f-four a {
+  text-decoration: none;
+  color: #000000;
+  all: unset;
+  display: block;
+  font-size: 15.5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.f-four a .span1 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-four a:hover .span1 {
+  width: 23%;
+}
+
+.f-four a .span2 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-four a:hover .span2 {
+  width: 30%;
+}
+
+.f-four a .span3 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-four a:hover .span3 {
+  width: 64%;
+}
+
+
+.f-four a .span4 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-four a:hover .span4 {
+  width: 26%;
+}
+
+
+.f-five {
+  margin-top: 2em;
+  display: block;
+  width: 200px;
+  padding: 0;
+  line-height: 1.4;
+}
+
+.f-five h3 {
+  font-size: 14px;
+  margin-bottom: 1.5em;
+}
+
+.f-five a {
+  text-decoration: none;
+  color: #000000;
+  all: unset;
+  display: block;
+  font-size: 15.5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.f-five a .span1 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-five a:hover .span1 {
+  width: 40%;
+}
+
+.f-five a .span2 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-five a:hover .span2 {
+  width: 40%;
+}
+
+.f-five a .span3 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-five a:hover .span3 {
+  width: 52%;
+}
+
+.f-five a .span4 {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  margin-top: 2px;
+  transition: width 0.3s ease;
+}
+
+.f-five a:hover .span4 {
+  width: 55%;
+}
+
+.f-six {
+  display: flex;
+  gap: 2em;
+}
+
+
+.f-six .f-six-icons {
+  gap: 2em;
+  display: flex;
+  margin-left: 14em;
+}
+
+.f-six .f-six-icons i {
+  font-size: 2.7em;
+}
+
+.f-six .f-six-text {
+  gap: 2em;
+  display: flex;
+  margin-top: .5em;
+}
+
+.f-six .f-six-text p {
+  color: black;
+  font-size: 18px;
+}
+
+.f-six .f-six-text a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  margin-left: 1em;
+}
+
+.f-six .f-six-text a span {
+  background-color: black;
+  width: 0;
+  transition: width 0.5s ease;
+  margin-top: 2px;
+  display: block;
+  height: 2px;
+}
+
+.f-six .f-six-text a:hover span {
+  width: 100%;
+}
+
+/* footer end */
